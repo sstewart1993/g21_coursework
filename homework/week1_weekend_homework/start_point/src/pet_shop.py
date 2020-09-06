@@ -32,7 +32,6 @@ def get_stock_count(pet_shop):
 #             counter.append(pet)
 #     return len(counter)
             
-            
 def find_pet_by_name(pet_shop, pet_name):
     for pet in pet_shop["pets"]:
         if pet["name"] == pet_name:
@@ -65,7 +64,17 @@ def add_pet_to_customer(customers, new_pet):
     for customer in customers:
         return customers["pets"].append(new_pet)
 
+# ------ Optional
 
+def customer_can_afford_pet(customers, new_pet):
+    for customer in customers:    
+        if customers["cash"] >= new_pet["price"]:
+            return True
+        else:
+            return False 
+
+
+    
 
 
 
