@@ -25,6 +25,7 @@ def get_stock_count(pet_shop):
     count = len(pet_shop["pets"])
     return count
 
+
 # def get_pets_by_breed(pet_shop, pet_breed):
 #     counter = []
 #     for pet in pet_shop["pets"]:
@@ -73,7 +74,7 @@ def customer_can_afford_pet(customers, new_pet):
         else:
             return False 
 
-
+# ------ Integration Tests
     
 
 
