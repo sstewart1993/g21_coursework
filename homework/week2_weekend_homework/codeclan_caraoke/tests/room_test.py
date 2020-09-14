@@ -47,9 +47,10 @@ class TestRoom(unittest.TestCase):
         self.room.remove_song(self.song)
         self.assertEqual(0, len(self.room.songs))
     
-    def test_play_song(self):
+    def test_play_song_and_remove(self):
         self.room.add_song(self.song)
         self.assertEqual("Now playing My Favourite Song by My Favourite Artist", self.room.play_song())
+
 
     def test_add_to_tab(self):
         self.room.add_to_tab(10.00)
