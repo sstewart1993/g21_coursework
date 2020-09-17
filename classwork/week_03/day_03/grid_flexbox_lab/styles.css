@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body > header {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(33, 97, 156);
+    color: white;
+}
+
+body > header > nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+body > header > nav > ul > li > a {
+    margin-right: 8px;
+    color: white;
+  }
+
+.locations {
+    max-width: 1400px ;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    flex: 33%;
+}
+
+.search {
+    color: white;
+    background-color: rgb(20, 23, 66);
+    padding: 20px;
+}
+
+.pop_destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 20px;
+}
+
+.pop_places {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+.locations > img {
+    padding: 20px;
+    height: 250px;
+}
+
+.gallery {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex: 33%
+}
+
+footer {
+    padding: 20px;
+    display:flex;
+    background-color: rgb(36, 36, 36);
+    justify-content: space-between;
+    color: white;
+}
+
+.address > p {
+    font-size: 14px;
+}
+
+footer > nav > ul {
+    list-style: none;
+}
+
