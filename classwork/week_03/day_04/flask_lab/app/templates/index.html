@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1><u>Events</u></h1>
+
+    {% for event in events %}
+    <p> <b>{{event.date}}:   {{ event.name }}, {{ event.room_location }}:</b> 
+    <br>{{ event.description }} - ({{ event.number_of_guests}})
+        {% if event.recurring == True %}
+        <b>R</b></p>
+        {% endif %}
+
+        <form action="/del-event">
+        <input type="submit" name=deletebutton value="Delete" class="delbutton"> 
+        </form>
+        
+    {% endfor %}
+
+    <form action="/add-event" method="POST">
+        <label for="date"></label>
+        <input type="date" name="date" id="date">
+        <label for="name"></label>
+        <input type="text" name="name" id="name" placeholder="What's happening?">
+        <label for="room_location"></label>
+        <input type="text" name="room_location" placeholder="Where?">
+        <label for="description"></label>
+        <textarea name="description" rows="2" placeholder="Description"></textarea>
+        <label for="number_of_guests"></label>
+        <input type="text" name="number_of_guests" placeholder="# of People">
+        <label for="recurring">Check if recurring</label>
+        <input type="checkbox" name="recurring">
+        <input type="submit" value="Add Event">
+
+
+    </form>    
+
+{% endblock %}
